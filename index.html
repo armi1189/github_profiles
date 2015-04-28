@@ -8,13 +8,14 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controller/gitUserSearchController.js"></script>
   </head>
 
   <body ng-controller="GitUserSearchController as searchCtrl">
     <div>
       <form class="form-horizontal">
         <input type="text">
-        <butoon class="btn">Search</button>
+        <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
       </form>
       <ul class="list-group" ng-repeat="user in searchCtrl.searchResult.items">
         <li>
